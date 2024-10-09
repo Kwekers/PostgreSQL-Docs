@@ -54,4 +54,23 @@
 1. After installation finishes, the Setup Wizard will notify you.
 2. Click **Finish**.
 
+### Step 9: Add psql To System Variable
+To make psql available from the command line without navigating to the PostgreSQL folder, you need to add it to your system’s environment variables:
+
+##### 1. Copy code:
+   ```C:\Program Files\PostgreSQL\<version>\bin```
+   
+##### 2. Add psql to Environment Variables:
+   - Press Windows + R, type sysdm.cpl, and press Enter.
+   - In the System Properties window, go to the Advanced tab.
+   - Click Environment Variables.
+   - Under System Variables, scroll down and select the Path variable, then click Edit.
+   - In the Edit Environment Variable window, click New and add the path to the bin folder (e.g., C:\Program Files\PostgreSQL\<version>\bin).
+   - Click OK to save your changes.
+
+##### 3. Verify the Path:
+   Open a new Command Prompt window (important to open a new one).
+   Type ```psql --version``` and press Enter.
+   You should see the PostgreSQL version output, indicating that psql is correctly added to your PATH.
+      
 ---
